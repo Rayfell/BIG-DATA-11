@@ -1,0 +1,48 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'title cards';
+  height: 1050%;
+}
+
+
+.main-title {
+  grid-area: title;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 88px;
+  margin-top: 168px;
+  margin-left: 88px;
+  margin-right: 100px;
+}
+
+.cards * {
+  /*border: 1px solid;*/
+}
+
+.cards {
+  grid-area: cards;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  /*margin-top: 24px;*/
+  width: max-content;
+}
+
+.cards-col {
+}
+.cards-col__offsets{
+  margin-top: 40px;
+}
+.card {
+  width: 320px;
+  margin: 16px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.card img {
+  width: 100%;
+}

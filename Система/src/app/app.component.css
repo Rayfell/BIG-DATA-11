@@ -1,0 +1,108 @@
+
+:host {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 56px 1fr;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+ 'header header'
+ 'sidebar main';
+}
+
+.header {
+  grid-area: header;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.header .logo {
+  font-size: 2rem;
+  line-height: 1.15;
+  padding: 12px 90px;
+  color: #659BEA;
+  text-align: center;
+}
+
+.header .tabs {
+  display: flex;
+  height: 100%;
+}
+
+.header .tabs a {
+  color: black;
+  font-weight: normal;
+}
+
+.header .tabs .tab {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 24px;
+}
+
+.header .tabs .tab:hover,
+.header .tabs .tab.active{
+  background-color: #F2F2F2;
+}
+
+.header .tabs .tab.active::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  border: 16px solid transparent;
+  border-bottom-color: #9CD5FF;
+}
+
+nav.sidebar{
+  grid-area: sidebar;
+  display: block;
+  height: 100%;
+  background-color: #fff;
+}
+
+.menu{
+  padding-top: 32px;
+}
+.menu-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding-left: 44px;
+}
+.menu-item:hover,
+.menu-item__active{
+  background-color: #F2F2F2;
+}
+.menu-item__active::before {
+  content: "";
+  position: absolute;
+  right: -4px;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  border: 16px solid transparent;
+  border-right-color: #9CD5FF;
+}
+
+
+
+
+main.main{
+  grid-area: main;
+  overflow-y: auto;
+  padding: 32px 64px 0 24px;
+}
+
